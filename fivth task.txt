@@ -1,0 +1,165 @@
+
+  1)Print odd numbers in an array
+anonymous  :  function(array){
+                  for(var i = 0 ; i< array.length ; i++){
+                        if(array[i]%2!=0){
+                           console.log(array[i])
+                        } 
+                   }
+                }
+IIFE :       (function(array){
+             for(var i = 0 ; i< array.length ; i++){
+                        if(array[i]%2!=0){
+                           console.log(array[i])
+                        } 
+                   }
+             })([1,2,3,4])
+             
+Arrow Function    oddNumbers = (array) => {
+                   for(var i = 0 ; i< array.length ; i++){
+                        if(array[i]%2!=0){
+                           console.log(array[i])
+                        } 
+                   }
+                        }
+  2)Convert all the strings to title caps in a string array
+
+anonymous ;
+
+function toTitleCase(str) {
+  str = str.toLowerCase().split(' ');
+  for (var i = 0; i < str.length; i++) {
+    str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+  }
+  return str.join(' ');
+}
+
+console.log(toTitleCase("welcome to guvi zen class"));
+
+IIFE FUNCTION;
+
+(function toTitleCase(str) {
+  str = str.toLowerCase().split(' ');
+  for (var i = 0; i < str.length; i++) {
+    str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+  }
+  return str.join(' ');
+})
+(console.log("welcome to guvi zen class"));
+
+ARROW FUNCTION
+
+function titleCase = (str) => {
+  str = str.toLowerCase().split(' ');
+  for (var i = 0; i < str.length; i++) {
+    str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+  }
+  return str.join(' ');
+} {
+
+console.log(titleCase("welcome to guvi zen class"))};
+
+
+Sum of all numbers in an array :
+
+
+anonymous:
+
+var res=function(array){
+  var sum = 0;
+  for(var i = 0 ; i< array.length ; i++){
+     sum = sum + array[i];
+   }
+   
+}
+
+
+console.log(res[1,2,3,4,5,5]);
+
+
+IIFE FUNCTION
+
+
+ (function(array){
+             var sum = 0;
+                  for(var i = 0 ; i< array.length ; i++){
+                     sum = sum + array[i];
+                   }
+                   console.log(sum);
+             })([1,2,3,4])
+
+ARROW FUNCTION;
+
+
+      sum = (array)=>{
+             var sum = 0;
+                  for(var i = 0 ; i< array.length ; i++){
+                     sum = sum + array[i];
+                   }
+                   return sum;
+                   }
+
+
+                   }
+4)Return all the prime numbers in an array
+    Anonymous Function:
+                 function(numArray){
+                      numArray = numArray.filter((number) => {
+                        for (var i = 2; i <= Math.sqrt(number); i++) {
+                          if (number % i === 0) return false;
+                        }
+                        return true;
+                      });
+                      console.log(numArray);
+                  }
+   IIFE 
+                   (  
+                   function(numArray){
+                      numArray = numArray.filter((number) => {
+                        for (var i = 2; i <= Math.sqrt(number); i++) {
+                          if (number % i === 0) return false;
+                        }
+                        return true;
+                      });
+                      console.log(numArray);
+                  })([1,2,3,4])
+    Arrow Function :
+    
+       primeNumber = (numArray) => {
+                      numArray = numArray.filter((number) => {
+                        for (var i = 2; i <= Math.sqrt(number); i++) {
+                          if (number % i === 0) return false;
+                        }
+                        return true;
+                      });
+                      console.log(numArray);
+                  }
+
+
+Remove duplicates from an Array:
+
+ Anonymous Function:
+
+ var res=function(array){
+                        let dup = [...new Set(array)];
+                        console.log(dup);
+                      }
+                      
+                      res([1.2,3,4,4,5,5]);
+
+
+(function(array){
+                        let dup = [...new Set(array)];
+                        console.log(dup);
+                      })
+                      
+                      ([1.2,3,4,4,5,5]);
+
+
+res=(array)=>{
+                        let dup = [...new Set(array)];
+                        console.log(dup);
+                      };
+                      
+                      res([1.2,3,4,4,5,5]);
+
